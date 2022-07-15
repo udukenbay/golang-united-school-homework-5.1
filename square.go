@@ -1,27 +1,5 @@
 package square
 
-//package main
-
-import "fmt"
-
-func measure(g geometry) {
-	fmt.Println(g)
-	fmt.Printf("area     : %f \n", g.Area())
-	fmt.Printf("perimeter: %f \n", g.Perimeter())
-}
-
-func main() {
-	//p := Point{3, 5}
-	s := Square{a: 4}
-	//fmt.Printf("point :", s.End(p))
-	measure(&s)
-}
-
-type geometry interface {
-	Area() uint
-	Perimeter() uint
-}
-
 type Point struct {
 	x, y int
 }
