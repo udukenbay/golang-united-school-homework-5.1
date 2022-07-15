@@ -11,9 +11,9 @@ func measure(g geometry) {
 }
 
 func main() {
-	p := Point{3, 5}
+	//p := Point{3, 5}
 	s := Square{a: 4}
-	fmt.Printf("point :", s.End(p))
+	//fmt.Printf("point :", s.End(p))
 	measure(&s)
 }
 
@@ -31,9 +31,9 @@ type Square struct {
 	a     uint
 }
 
-func (sq Square) End(p Point) Point {
-	x := p.x + int(sq.a)
-	y := p.y - int(sq.a)
+func (sq Square) End() Point {
+	x := sq.start.x + int(sq.a)
+	y := sq.start.y - int(sq.a)
 	return Point{x, y}
 }
 
